@@ -66,4 +66,10 @@ class StringCalculatorTest {
 		StringCalculator cal = new StringCalculator();
 		assertEquals(2, cal.Add("//^\n1000^2"));
 	}
+	
+	@Test
+	void anyLengthDelimiterTest() throws Exception {
+		StringCalculator cal = new StringCalculator();
+		assertEquals(2, cal.Add("//;;;;\n1000;;;;2"));
+	}
 }
