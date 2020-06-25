@@ -70,6 +70,6 @@ class StringCalculatorTest {
 	@Test
 	void anyLengthDelimiterTest() throws Exception {
 		StringCalculator cal = new StringCalculator();
-		assertEquals(2, cal.Add("//;;;;\n1000;;;;2"));
+		assertEquals(2, cal.Add("//;WE;;\n1000;WE;;2"));
 	}
 }
