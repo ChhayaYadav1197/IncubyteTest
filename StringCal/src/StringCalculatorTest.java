@@ -24,4 +24,9 @@ class StringCalculatorTest {
 	}
 	
 
+	@Test
+	void testAddUnknowAmountOfNumbers() {
+		StringCalculator cal = new StringCalculator();
+		assertEquals(19, cal.Add("1,2,3,4,4,5"));
+	}
 }
