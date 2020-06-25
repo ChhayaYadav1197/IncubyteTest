@@ -52,4 +52,13 @@ class StringCalculatorTest {
 		StringCalculator cal = new StringCalculator();
 		assertEquals(3, cal.Add("//^\n1^2"));
 	}
+
+	@Test
+	void allowAddToHandleNegativeNumber() {
+		StringCalculator cal = new StringCalculator();
+		Exception e = assertThrows(Exception.class, () -> {
+			cal.Add("-20,\n,2");
+		});
+//		assertEquals(true, e.getMessage().startsWith("Negative Not Allowed"));
+	}
 }
