@@ -30,7 +30,10 @@ public class StringCalculator {
 					if (i < 0) {
 						exception = exception + i + ",";
 					} else
+					{
+						if(i<1000)
 						addition += i;
+					}
 				}
 			}
 			if (exception.endsWith(",")) {

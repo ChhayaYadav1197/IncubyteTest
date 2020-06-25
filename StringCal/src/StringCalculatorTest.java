@@ -56,9 +56,14 @@ class StringCalculatorTest {
 	@Test
 	void allowAddToHandleNegativeNumber() {
 		StringCalculator cal = new StringCalculator();
-		Exception e = assertThrows(Exception.class, () -> {
+		assertThrows(Exception.class, () -> {
 			cal.Add("-20,\n,2");
 		});
-//		assertEquals(true, e.getMessage().startsWith("Negative Not Allowed"));
+	}
+
+	@Test
+	void ignoreNumberGreaterThan1000() throws Exception {
+		StringCalculator cal = new StringCalculator();
+		assertEquals(2, cal.Add("//^\n1000^2"));
 	}
 }
