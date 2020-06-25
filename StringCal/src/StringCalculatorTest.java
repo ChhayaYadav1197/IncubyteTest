@@ -46,4 +46,10 @@ class StringCalculatorTest {
 		});
 
 	}
+
+	@Test
+	void allowAddToHandleAnyDelimiter() throws Exception {
+		StringCalculator cal = new StringCalculator();
+		assertEquals(3, cal.Add("//^\n1^2"));
+	}
 }
